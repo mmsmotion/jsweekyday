@@ -1,0 +1,84 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+<body>
+    
+    <script>
+
+            //function statement
+            // function one(){
+            //     return "this is one";
+            // }
+
+            //function expression
+            // let one = function(){
+            //     return "this is one";
+            // }
+
+            let one = _ => "this is one";
+
+
+            // function two(){
+            //     let x = "this is two";
+            //     return x;
+            // }
+            let two = () => {
+                let x = "this is two";
+                return x;
+            }
+
+   
+
+            // function three(x){
+            //     return "this is "+x;
+            // }
+
+            let three = (x) => "this is "+ x;
+
+
+            // function four(x,y){
+            //     let z = x+y;
+            //     return z;
+            // }
+
+            let four = (x,y) => x+y;
+
+
+
+            //IIFE
+            // (function(){
+            //     console.log("this is five")
+            // })()
+            (_=>console.log('this is five'))()
+
+          
+
+
+            window.addEventListener("load",_=>console.log("I'm six"));
+
+
+            let seven = {
+                name: "seven",
+                showName: function () {
+                    console.log(this);
+                    
+                },
+                myName(){
+                    return "this is "+this.name;
+                },
+                showMyName : _ => console.log(seven.name)
+               
+            }
+
+       
+
+
+    </script>
+
+</body>
+</html>

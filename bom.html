@@ -1,0 +1,55 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Browser Object Model</title>
+</head>
+<body>
+
+    <h1>Counter : <span id="counter">5</span></h1>
+
+    <button id="myBtn">start</button>
+
+    <script>
+
+        // let no = 1;
+
+        // function aa(){
+        //     console.log(no++ +"hello I'm working")
+        //     return "san kyi tar";
+            
+        // }
+
+        // //ချိန်ကိုက်ဗုံး 
+        // let myJob = setInterval(aa,2000);
+
+
+        let time = prompt("when do U want to start (in second) ? ")
+        document.getElementById("counter").innerText = time;
+        let timeInMillisecond = time * 1000
+
+        document.getElementById("myBtn").onclick = function(){
+            toRun(timeInMillisecond)
+        }
+
+        function reverseCounter(){
+            let counter = document.getElementById("counter").innerText;
+            document.getElementById("counter").innerText = counter-1;
+        }
+
+        function toRun(toStartTime,x,y,z){
+            setInterval(reverseCounter, 1000);
+
+            setTimeout(function () {
+                location.href = "https://google.com"
+            },toStartTime)
+        }
+
+
+
+
+    </script>
+</body>
+</html>

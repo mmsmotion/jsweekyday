@@ -1,0 +1,70 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+<body>
+    <script>
+
+        let arr = [];
+        let obj = {};
+        let pocketMoney = 10000;
+
+
+        // "a" ? console.log(true) : console.log(false)
+        // "" ? console.log(true) : console.log(false)
+        // -1 ? console.log(true) : console.log(false)
+        // 0 ? console.log(true) : console.log(false)
+        // 1 ? console.log(true) : console.log(false)
+        // 1.4 ? console.log(true) : console.log(false)
+        // NaN ? console.log(true) : console.log(false)
+        // undefined ? console.log(true) : console.log(false)
+        // null ? console.log(true) : console.log(false)
+        // arr ? console.log(true) : console.log(false)
+        // obj ? console.log(true) : console.log(false)
+
+
+        if(pocketMoney>=1500){
+
+            console.log("သားသားကျောင်းသွားမယ်")
+            pocketMoney -= 300;
+
+            if(pocketMoney > 15300){
+
+                pocketMoney -= 15000;
+                pocketMoney -= 300;
+                console.log("hotpot စားပြိး အိမ်ပြန်မယ်",pocketMoney)
+
+            }else if(pocketMoney > 10300){
+
+                pocketMoney -= 10000;
+                pocketMoney -= 300;
+
+                console.log("ရုပ်ရှင်ကြည့် အိမ်ပြန်မယ်", pocketMoney)
+
+
+            }else if(pocketMoney > 5300){
+                pocketMoney -= 5000;
+                pocketMoney -= 300;
+
+                console.log("bubble tea သောက် အိမ်ပြန်မယ်", pocketMoney)
+            }else{
+
+                pocketMoney -= 300;
+                console.log("အိမ်ပြန်မယ်",pocketMoney)
+            
+            }
+
+
+        }else{
+
+            console.log("ခွင့်တိုင်မယ်")
+
+        }
+
+    </script>
+</body>
+</html>

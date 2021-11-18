@@ -1,0 +1,85 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+<body>
+    <script>
+
+        let x = 5;
+        let y;
+
+        // အသက် - ၂၇ ထည့်မလိုက်မယ်ဆို မွေးတဲ့ ခုနှစ်ပြန်ထုတ်ပေးရမယ် - task
+        
+        function test(){
+            let a = 5;
+            let b = 10;
+        
+            return a+b;
+        }
+
+
+        let rates = {
+            usd : 1760,
+            sgd : 1304,
+            eur : 2308
+        }
+
+
+        //mg mg was born in 1994
+
+        function findBirthYear(name="HHZ",myAge="27"){
+            let currentYear = 2021;
+            let bdYear = currentYear - myAge;
+            return `${name} was born in ${bdYear}`;
+        }
+
+        // task - usd 50 ရှိရင် မြန်မာငွေဘယ်လောက်လဲ
+        // task - sdg 30 ရှိရင် မြန်မာငွေဘယ်လောက်လဲ
+        // task - eur 150 ရှိရင် မြန်မာငွေဘယ်လောက်လဲ
+
+        // alogrithm - amout * rate = value with mmk
+
+        function toMMK(amout,fromCurrency){
+            let exchangeRate = rates[fromCurrency];
+            let money = amout * exchangeRate;
+
+            return money;
+            // return tax(money);
+            return {
+                "1.ပေးငွေး" : amout +" "+fromCurrency,
+                "2.ငွေလဲနူန်း" : rates[fromCurrency]+" MMK",
+                "3.-------" : "-------",
+                "4.ရရှိငွေ" : money + " MMK",
+                "5.အခွန်" : tax(money)+ " MMK",
+                "6.-------": "-------",
+                "7.ထုတ်ယူရန်ငွေ" : money - tax(money) + " MMK"
+            }
+        }
+
+        // task - usd 50 -> sgd ပြောင်းရင်ဘယ်လောက်လဲ
+        //  alogrithm - amout * rate = mmk / torate = final currency
+        
+        function exchange(amount, fromCurreny, toCurrenty ){
+            let toMMK = amount * rates[fromCurreny];
+            let finalCurrency = toMMK/rates[toCurrenty];
+            return `${finalCurrency} ${toCurrenty}`;
+        }
+
+        // alogrithm - 100/100 = 1*5
+        function tax(money){
+            return (money/100)*5;
+        }
+
+        function a(x=0,y=0){
+            return x+y;
+        }
+
+    
+
+    </script>
+</body>
+</html>
